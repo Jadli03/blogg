@@ -1,0 +1,55 @@
+.post-page {
+padding: 3em;
+}
+.post-form{
+position: relative;
+}
+.post-form-group{
+    margin: 0 0 0 150px;
+    display: flex;
+    align-items: center;
+}
+.post-file-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.post-input {
+    font-size: 2rem;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+    outline: none;
+}
+.post-input:focus{
+    outline: none;
+}
+.post-content{
+    font-size: 1rem;
+}
+.post-form  .post-submit{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background-color: lightseagreen;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    width: 70px;
+    color: white;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.post-img{
+margin-left: 150px;
+  width: 70vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -1,0 +1,78 @@
+.profile{
+    display: flex;
+}
+
+.profile-wrapper{
+    flex:9;
+    padding: 1.2em;
+}
+
+.profile-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-update{
+    font-size: 2rem;
+    margin-top: 1.2em;
+}
+
+.profile-delete{
+    background-color: red;
+    color:white;
+    font-size: 1rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.update-profile-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.update-profile-image{
+    display: flex;
+    align-items: center;
+    margin: 0.7em 0;
+}
+.update-profile-image > img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+ .profile-image-icon{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    color: forestgreen;
+    font-size: 30px;
+    margin-left: 10px;
+    justify-content: flex-end;
+    margin-top: 65px;
+    cursor: pointer;
+}
+.update-profile-form > label{
+    font-size: 1.3rem;
+    margin-top: 1.3em;
+}
+.update-profile-form > input {
+    margin: 0.7em 0;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid green;
+}
+.update-profile-form > input:focus{
+    outline: none;
+}
+.update-submit{
+    border: none;
+    align-self: center;
+    width: 100px;
+    background-color: rgb(39, 165, 159);
+    color: white;
+    padding:10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}

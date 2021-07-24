@@ -1,0 +1,56 @@
+
+/* NAVBAR */
+.navbar {
+    max-width: 100%;
+    height: 6vh;
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 999;
+}
+
+.navbar-left,.navbar-right{
+    flex:3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-center{
+    flex:6;
+}
+.navbar-left h1{
+    font-family:  'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+}
+.navbar-right .navbar-profile-img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+ .navbar-items{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+ .navbar-items .navbar-item{
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 1.5;
+}
+.navbar-item .links{
+    text-decoration: none;
+    color: inherit;
+}
+.active-class{
+
+}
+
+.navbar-search {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
