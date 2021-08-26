@@ -73,7 +73,7 @@ const CreatePost =() => {
                 onChange={(e)=>setFile(e.target.files[0])}
                 style={{display:"none"}}
                 />
-                <input
+                <textarea
                 type="text"
                 placeholder="Title"
                 className="post-input post-title"
@@ -81,7 +81,8 @@ const CreatePost =() => {
                 onChange={postChange}
                 value = {title}
                 autoFocus
-                />
+                >
+                </textarea>
                 </div>
                 <div className="post-form-group">
                     <textarea

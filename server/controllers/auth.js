@@ -28,7 +28,11 @@ const register = async (req,res) =>{
 }
 
 const login = async (req, res) => {
-    try {
+    
+  try {
+      if(!req.body.email || !req.body.password)
+          return res.status(422).json({error: "fill all the details"})
+
       const user = await User.findOne({ email: req.body.email});
       if(!user)
       return res.status(400).json({error:"Wrong credentials!"});

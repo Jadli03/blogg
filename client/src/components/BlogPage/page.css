@@ -59,6 +59,7 @@
     line-height: 25px;
     font-family: 'Roboto Slab',sans-serif;
     text-align: justify;
+    margin-right: 20px;
   }
 
   .page-content::first-letter {
@@ -86,6 +87,7 @@
     font-family: 'Roboto Slab',sans-serif;
     text-align: justify;
     border: none;
+    height: 50vh;
   }
 
   .umode-body:focus {
@@ -100,4 +102,18 @@
     padding: 5px;
     align-self: flex-end;
     margin-top: 25px;
+  }
+
+  .single-posted{
+    margin-right: 20px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 479px){ 
+    .page-img {
+      height: 200px;
+    }
+
+    .page-wrapper {
+      padding: 10px;
+    }
   }

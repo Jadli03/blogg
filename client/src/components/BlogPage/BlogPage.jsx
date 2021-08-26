@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../Sidebar/Sidebar'
+// import Sidebar from '../Sidebar/Sidebar'
 import Page from './Page';
 import './blogpage.css';
 
@@ -7,7 +7,7 @@ const BlogPage = () =>{
     return (
         <div className="blog-page">
             <Page />
-            <Sidebar />
+            {/* <Sidebar /> */}
         </div>
     )
 }

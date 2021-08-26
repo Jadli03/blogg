@@ -28,3 +28,10 @@
     margin-top: 60px;
     object-fit: cover;
   }
+
+  @media only screen and (min-width: 280px) and (max-width: 479px){ 
+    .header {
+    display: none;
+    }
+  }
+  

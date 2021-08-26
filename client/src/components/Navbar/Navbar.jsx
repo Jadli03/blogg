@@ -2,20 +2,27 @@ import {NavLink} from 'react-router-dom';
 import { useContext } from 'react';
 import {Context} from '../../useReducer/Context';
 import './navbar.css';
+
+
 const Navbar = () => {
+    const publicFolder = "http://localhost:5000/images/";
     const {user,dispatch} = useContext(Context);
-    const logoutUser = () => {
-        dispatch({type: "LOGOUT"});
-    }
+    // const logoutUser = () => {
+    //     dispatch({type: "LOGOUT"});
+    // }
     return(
         <nav className = "navbar container">
         <div className="navbar-left">
-        <h1>Blogg</h1>
+        <NavLink to="/" className="logolink"> <h1>GG BLOG </h1></NavLink>
         </div>
         <div className="navbar-center">
             <ul className="navbar-items">
-                <li className="navbar-item">
-                <NavLink
+                {
+                    user ?
+                   (
+                       <>
+                    <li className="navbar-item">
+                 <NavLink
                 exact
                 className="links"
                 activeClassName="active-class"
@@ -23,25 +30,8 @@ const Navbar = () => {
                     HOME
                 </NavLink>
                 </li>
-                <li className="navbar-item">
-                <NavLink
-                exact
-                className="links"
-                activeClassName="active-class"
-                to="/">
-                    ABOUT
-                </NavLink>
-                </li>
-                <li className="navbar-item">
-                <NavLink
-                exact
-                className="links"
-                activeClassName="active-class"
-                to="/">
-                   CONTACT
-                </NavLink>
-                </li>
-                <li className="navbar-item">
+
+               <li className="navbar-item">
                 <NavLink
                 exact
                 className="links"
@@ -50,20 +40,29 @@ const Navbar = () => {
                     CREATE
                 </NavLink>
                 </li>
-                <li className="navbar-item"
+                </>
+                    )
+                    :
+                   ( <li></li>)
+                }
+
+                {/* <li className="navbar-item"
                 onClick={logoutUser}
                 >
                     {user && "LOGOUT"}
-                </li>
+                </li> */}
             </ul>
         </div>
         <div className="navbar-right">
+            
             {
                 user ?(
+         <NavLink to="/profile">
                     <img
         className="navbar-profile-img"
-         src={user.pic}
+         src={publicFolder + user.pic}
           alt="profile" />
+          </NavLink>
                 )
                 :
                 (
@@ -72,7 +71,6 @@ const Navbar = () => {
                 <NavLink
                 exact
                 className="links"
-                style={{fontSize:'0.7rem'}}
                 to="/login">
                    LOGIN
                 </NavLink>
@@ -81,7 +79,6 @@ const Navbar = () => {
                 <NavLink
                 exact
                 className="links"
-                style={{fontSize:'0.7rem'}}
                 to="/register">
                    SIGN UP
                 </NavLink>
@@ -90,7 +87,7 @@ const Navbar = () => {
                 )
             }
 
-        <i className="fa fa-search navbar-search"></i>
+        {/* <i className="fa fa-search navbar-search"></i> */}
         </div>
         </nav>
     )

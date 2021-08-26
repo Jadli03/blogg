@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
 import Blog from '../Blog/Blog';
-import Sidebar from '../Sidebar/Sidebar';
+// import Sidebar from '../Sidebar/Sidebar';
 import {useState,useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import axios from 'axios';
@@ -26,7 +26,7 @@ const Home = () => {
         <Header />
         <div className="blog-container">
            <Blog posts={posts}/>
-           <Sidebar/>
+           {/* <Sidebar/> */}
         </div>
         </>
     )
